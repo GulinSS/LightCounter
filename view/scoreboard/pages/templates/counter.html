@@ -1,0 +1,69 @@
+{% extends "root.html" %}
+
+{% block title -%}
+    Счетчик #12312313
+{%- endblock %}
+
+{% block head %}
+    <script type="text/javascript" src="/static/js/ns/LightCounter/View/Counter.js"></script>
+{% endblock %}
+
+{% block container %}
+    <div class="row">
+		<div class="span8">
+			<h2>Счетчик #12312313</h2>
+		</div>
+		<div class="span4">
+			<button class="btn btn-primary pull-right">Команды</button>
+		</div>
+	</div>
+
+	<div id="breadcrumbs"></div>
+
+	<div>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Дата</th>
+					<th>Состояние</th>
+					<th>Команда</th>
+					<th>Результат</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Сегодня, 7:10</td>
+					<td></td>
+					<td>Отключение потребителя</td>
+					<td>В очереди</td>
+				</tr>
+				<tr>
+					<td>Вчера, 7:00</td>
+					<td></td>
+					<td>Запрос показаний</td>
+					<td>Обрабатывается</td>
+				</tr>
+				<tr>
+					<td>16.04.2012, 7:00</td>
+					<td><div class="scoreboard-led-icon counter-ok"></div></td>
+					<td>Публикация показаний</td>
+					<td>Подробности результата</td>
+				</tr>
+				<tr>
+					<td>16.04.2012, 7:00</td>
+					<td><div class="scoreboard-led-icon counter-fail"></div></td>
+					<td>Запрос показаний</td>
+					<td>Подробности неудачи</td>
+				</tr>
+				<tr>
+					<td>16.04.2012, 7:00</td>
+					<td><div class="scoreboard-led-icon counter-off"></div></td>
+					<td>Отключение потребителя</td>
+					<td>Подробности результата</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div id="paging"></div>
+{% endblock %}

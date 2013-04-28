@@ -1,0 +1,86 @@
+body {
+    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+
+.scoreboard {
+    /*width: 100px;*/
+    display: block;
+    background-color: #fbfbfb;
+    overflow: hidden;
+    text-align: center;
+}
+
+.scoreboard-led {
+    margin: 3px;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: middle;
+    /* ie7 inline-block hack */
+    zoom: 1;
+    *display: inline;
+}
+
+.scoreboard-led:hover {
+    cursor: pointer;
+}
+
+.scoreboard-led-icon {
+    margin-bottom: 5px;
+}
+
+.scoreboard-led-label, a.scoreboard-led-label {
+    color: #888;
+    text-decoration: none;
+    text-align: center;
+}
+
+.scoreboard-led:hover .scoreboard-led-label, .scoreboard-led:hover a.scoreboard-led-label {
+    color: #333;
+    text-decoration: underline;
+}
+
+.ui-dialog .ui-dialog-buttonpane a {
+    margin-right: 0.4em;
+}
+
+/* Yopopup */
+.popup-area
+{
+    position: absolute;
+}
+
+.popup-actor
+{
+    cursor: pointer;
+}
+/* / */
+
+/* http://stackoverflow.com/questions/1964839/jquery-please-wait-loading-animation */
+.modalAjax {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgb(187, 187, 187)
+                url('../img/ajax-loader-big.gif')
+                50% 50%
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modalAjax {
+    display: block;
+}
+/* / */

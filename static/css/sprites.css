@@ -1,0 +1,64 @@
+.arm-selected, .counter-fail, .counter-off, .counter-ok, .counter-selected, .floorer-fail, .floorer-ok, .floorer-selected, .arm-fail, .arm-ok{
+	background: url(../img/sprites.png) no-repeat;
+}
+
+.arm-selected{
+	background-position: 0 0;
+	width: 64px;
+	height: 53px;
+}
+
+.counter-fail{
+	background-position: -116.79998779296875px -117.39999771118164px ;
+	width: 32px;
+	height: 32px;
+}
+
+.counter-off{
+	background-position: -1.4000244140625px -116.80000686645508px ;
+	width: 32px;
+	height: 32px;
+}
+
+.counter-ok{
+	background-position: -79.20001220703125px -117.39999771118164px ;
+	width: 32px;
+	height: 32px;
+}
+
+.counter-selected{
+	background-position: -41.20001220703125px -117.80000686645508px ;
+	width: 32px;
+	height: 32px;
+}
+
+.floorer-fail{
+	background-position: 0 -58.20000076293945px ;
+	width: 48px;
+	height: 48px;
+}
+
+.floorer-ok{
+	background-position: -107px -58.80000686645508px ;
+	width: 48px;
+	height: 48px;
+}
+
+.floorer-selected{
+	background-position: -55px -59.000003814697266px ;
+	width: 48px;
+	height: 48px;
+}
+
+.arm-fail{
+	background-position: -71.4000244140625px 0;
+	width: 64px;
+	height: 53px;
+}
+
+.arm-ok{
+	background-position: -142.60000610351562px 0;
+	width: 64px;
+	height: 53px;
+}
+

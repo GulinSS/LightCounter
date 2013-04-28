@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %} - LightCounter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/smoothness/jquery-ui-1.8.19.custom.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/sprites/sprites.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/application.css">
+
+    <script type="text/javascript" src="/static/js/core.js"></script>
+
+    <script type="text/javascript" src="/static/js/third/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/static/js/third/radio.min.js"></script>
+    <script type="text/javascript" src="/static/js/third/yopopup.js"></script>
+    <script type="text/javascript" src="/static/js/third/bootstrap.js"></script>
+    <script type="text/javascript" src="/static/js/third/jquery-ui-1.8.19.custom.min.js"></script>
+
+    <script type="text/javascript" src="/static/js/forked/notifier.js"></script>
+
+    <script type="text/javascript" src="{{ url('/routes') }}"></script>
+
+    <script type="text/javascript" src="/static/js/ns/Common/Ajax.js"></script>
+    <script type="text/javascript" src="/static/js/ns/Common/Widget.js"></script>
+    <script type="text/javascript" src="/static/js/ns/Common/Paging.js"></script>
+    <script type="text/javascript" src="/static/js/ns/Common/BreadCrumbs.js"></script>
+    <script type="text/javascript" src="/static/js/ns/Common/Routing.js"></script>
+    <script type="text/javascript" src="/static/js/ns/Common/Generators/Button.js"></script>
+    <script type="text/javascript" src="/static/js/ns/Common/Generators/TableField.js"></script>
+    <script type="text/javascript" src="/static/js/ns/Common/Generators/Menu.js"></script>
+    <script type="text/javascript" src="/static/js/ns/Common/Callbacks/ContextDialog.js"></script>
+    <script type="text/javascript" src="/static/js/ns/Common/Callbacks/ListDialog.js"></script>
+
+    <script type="text/javascript" src="/static/js/ns/LightCounter/Board.js"></script>
+    <script type="text/javascript" src="/static/js/ns/LightCounter/Filter.js"></script>
+    <script type="text/javascript" src="/static/js/ns/LightCounter/Desk.js"></script>
+    <script type="text/javascript" src="/static/js/ns/LightCounter/Leds/LedBase.js"></script>
+    <script type="text/javascript" src="/static/js/ns/LightCounter/Leds/LedArm.js"></script>
+    <script type="text/javascript" src="/static/js/ns/LightCounter/Leds/LedFloorer.js"></script>
+    <script type="text/javascript" src="/static/js/ns/LightCounter/Leds/LedCounter.js"></script>
+    <script type="text/javascript" src="/static/js/ns/LightCounter/ViewModels/Source.js"></script>
+    <script type="text/javascript" src="/static/js/ns/LightCounter/ViewModels/Range.js"></script>
+    <script type="text/javascript" src="/static/js/ns/LightCounter/ViewModels/Filter.js"></script>
+    <script type="text/javascript" src="/static/js/ns/LightCounter/ViewModels/Paging.js"></script>
+    <script type="text/javascript" src="/static/js/ns/LightCounter/ViewModels/Leds/LedArm.js"></script>
+    <script type="text/javascript" src="/static/js/ns/LightCounter/ViewModels/Breadcrumbs.js"></script>
+
+    <script>
+        $(ns("Common.Ajax.Modal").onLoad);
+        ns("Page").Params = $.parseJSON("{{ params | json }}");
+    </script>
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="brand" href="{{ url('/') }}">
+				Счет-контроль
+			</a>
+			<ul class="nav">
+				<li><a href="{{ url('/desk') }}">Монитор</a></li>
+				<li><a href="#">Настройки</a></li>
+				<li><a href="#">Профиль</a></li>
+			</ul>
+			<ul class="nav pull-right">
+				<li>
+					<a href="#">Петров П. П. (выйти)</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+    {% block container %}
+    {% endblock %}
+</div>
+
+<div class="modalAjax"><!-- Place at bottom of page --></div>
+</body>
+</html>

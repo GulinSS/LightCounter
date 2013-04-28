@@ -1,0 +1,41 @@
+Request:
+127.0.0.1:8000/statement, POST
+BODY:
+{ "StatementPostRequest" : {
+        "asyncHeader" : {
+            "OperationAsyncHeader" : {
+                "arm" : {
+                    "ARMIdentifier" : {
+                        "value" : "0"
+                     }      
+                },
+                "identifier" : {
+                    "Identifier" : {
+                        "value" : "0"
+                    }
+                },
+                "currentDate" : "2012-03-25 09:34:00"
+            }
+        },
+        "counterData" : {
+            "CounterData" : {
+                "counter" : {
+                    "CounterIdentifier" : {
+                        "value" : "0"
+                    }
+                },
+                "floorer" : {
+                    "FloorerIdentifier" : {
+                        "value" : "0"
+                    }
+                },
+                "floorerDate" : "2012-03-25 09:34:00",
+                "value" : "0",
+                "channel" : "0",
+                "state" : "0"
+            }
+        }
+    }
+}
+
+Response:
